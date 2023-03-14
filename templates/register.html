@@ -1,0 +1,32 @@
+<h1>sign up blow</h1>
+<style>
+    h2{
+        color: brown;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+</style>
+{% for message in messages %}
+
+<h2>{{message}}</h2>
+
+{% endfor %}
+
+<form action="register" method="POST">
+    {% csrf_token %}
+    <P>username:</P>
+    <input type="text" name="username">
+    <P>email:</P>
+    <input type="email" name="email"><br>
+    <P>password:</P>
+    <input type="password" name="password"><br>
+    <P>repeat password:</P>
+    <input type="password" name="password2"><br>
+
+    <button type="submit">submit</button>
+
+
+
+</form>

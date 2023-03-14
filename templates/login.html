@@ -1,0 +1,25 @@
+<h1> login blow</h1>
+
+<style>
+    h2{
+        color: brown;
+        text-align: center;
+        justify-content: center;
+    }
+</style>
+
+
+{% for message in messages  %}
+<h2>{{message}}</h2>
+
+
+{% endfor %}
+
+<form action="login" method="POST">
+    {% csrf_token %}
+    <P>Username:</P>
+    <input type="text" name="username">
+    <p>Password:</p>
+    <input type="password" name="password">
+    <button type="submit">submit</button> 
+</form>
